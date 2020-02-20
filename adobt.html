@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="./cats.html">Home</a>
+          <a class="nav-link active" href="./index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="./adobt.html">Adopt a cat</a>
@@ -36,18 +36,21 @@
               <td> Width </td>   
             </tr>   -->
           <tr>
-            <td><input id="Id" type="text" placeholder="ID"/></td>
-            <td><input id="name" type="text" placeholder="Name"/></td>
-            <td><input id="breed" type="text" placeholder="Breed"/></td>
-            <td><input id="age" type="text" placeholder="Age"/></td>
-            <td><input id="color" type="text" placeholder="Color"/></td>
+            <td><input id="Id" type="text" placeholder="ID" /></td>
+            <td><input id="name" type="text" placeholder="Name" /></td>
+            <td><input id="breed" type="text" placeholder="Breed" /></td>
+            <td><input id="age" type="text" placeholder="Age" /></td>
+            <td><input id="color" type="text" placeholder="Color" /></td>
             <td>
-              <button class="btn btn-success"
+              <button
+                class="btn btn-success"
                 type="button"
                 id="insert"
                 value="Insert"
                 onclick="onAddCat(this)"
-              >Insert</button>
+              >
+                Insert
+              </button>
             </td>
           </tr>
         </thead>
@@ -82,7 +85,9 @@
         var options = {};
         options.url = "https://api.thecatapi.com/v1/images/";
         options.type = "POST";
-        options.headers = {"x-api-key": "17d94b92-754f-46eb-99a0-65be65b5d18f"};
+        options.headers = {
+          "x-api-key": "17d94b92-754f-46eb-99a0-65be65b5d18f"
+        };
         var obj = Cat;
         obj.id = $("#id").val();
         obj.bread = $("#breed").val();
